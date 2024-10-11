@@ -1,0 +1,19 @@
+<div>
+    products
+    <ul>
+        <li *ngFor="let product of products">
+            <a routerLink="/">
+                <img [src]="product.imageUrl" alt="">
+            </a>
+            <p>{{product.name}}</p>
+            <p>{{product.favorite}}</p>
+            <p>{{product.stars}}</p>
+            <div>
+                <span *ngFor="let orig of product.origins">
+                    {{orig}}
+                </span>
+            </div>
+            <p>${{product.price}}</p>
+        </li>
+    </ul>
+</div>
