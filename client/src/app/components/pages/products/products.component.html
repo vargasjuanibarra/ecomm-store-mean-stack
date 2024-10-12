@@ -1,19 +1,16 @@
 <div>
-    products
-    <ul>
-        <li *ngFor="let product of products">
+    <ul class="grid grid-cols-3 gap-5 bg-white">
+        <li *ngFor="let product of products" class="mb-8">
             <a routerLink="/">
                 <img [src]="product.imageUrl" alt="">
             </a>
-            <p>{{product.name}}</p>
-            <p>{{product.favorite}}</p>
-            <p>{{product.stars}}</p>
-            <div>
-                <span *ngFor="let orig of product.origins">
-                    {{orig}}
-                </span>
+            <!-- <p>{{product.stars}}</p> -->
+            <div class="flex flex-col gap-1 py-4">
+                <app-star-rating></app-star-rating>
+                <p class="text-xl font-medium">{{product.name}}</p>
+                <p class="text-xl font-normal">${{product.price}}</p>
+
             </div>
-            <p>${{product.price}}</p>
         </li>
     </ul>
 </div>

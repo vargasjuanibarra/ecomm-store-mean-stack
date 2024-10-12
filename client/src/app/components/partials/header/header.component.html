@@ -1,38 +1,53 @@
 <header>
-    <div class="flex justify-between my-2 border-b-2 py-4">
-        
-        <div>
+    <div class="flex justify-between border-b-2 py-4 h-12 lg:h-20 items-center">
+        <div class="hidden sm:block">
             <nav>
-                <ul class="flex gap-6">
+                <ul class="hidden lg:flex gap-6">
                     <li class="relative">
-                        <a routerLink="">Shop</a>
-                        
+                        <a routerLink="" class="flex items-center gap-2">
+                            Shop
+                            <svg role="presentation" focusable="false" width="10" height="7"
+                                class="icon icon-chevron-bottom" viewBox="0 0 10 7">
+                                <path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+                            </svg>
+                        </a>
+
                     </li>
                     <li class="relative">
-                        <a routerLink="">Explore</a>
-                        <!-- <div class="absolute grid gap-2 p-2 text-start w-28 bg-gray-200">
-                            <a routerLink="">Profile</a>
-                            <a routerLink="">Orders</a>
-                            <a routerLink="">Logout</a>
-                        </div> -->
+                        <a routerLink="" class="flex items-center gap-2">
+                            Explore
+                            <svg role="presentation" focusable="false" width="10" height="7"
+                                class="icon icon-chevron-bottom" viewBox="0 0 10 7">
+                                <path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+                            </svg>
+                        </a>
+
                     </li>
                     <li>
                         <a routerLink="">Contact</a>
                     </li>
                 </ul>
+                <button type="button" class="p-4 lg:hidden" aria-controls="header-sidebar-menu"
+                    aria-expanded="false">
+                    <span class="sr-only">Open navigation menu</span><svg role="presentation" stroke-width="2"
+                        focusable="false" width="22" height="22" class="icon icon-hamburger" viewBox="0 0 22 22">
+                        <path d="M1 5h20M1 11h20M1 17h20" stroke="currentColor" stroke-linecap="round"></path>
+                    </svg></button>
             </nav>
         </div>
-        <div class="">
-            <a routerLink="/" class="font-bold">Desk Setup</a>
+        <div class="max-w-28 md:max-w-36 px-2">
+            <a routerLink="/" class="">
+                <img src="//www.balolo.de/cdn/shop/files/Balolo_Logotype_Black.png?v=1685968668&amp;width=661"
+                    alt="balolo logo wooden desk accessories made in Germany premium"
+                    srcset="//www.balolo.de/cdn/shop/files/Balolo_Logotype_Black.png?v=1685968668&amp;width=340 340w, //www.balolo.de/cdn/shop/files/Balolo_Logotype_Black.png?v=1685968668&amp;width=510 510w"
+                    width="661" height="134" sizes="170px" class="header__logo-image">
+            </a>
         </div>
         <div>
-            <nav>
+            <nav class="flex items-center">
                 <ul class="flex gap-4 mr-6">
-                    <li>
-                        <a routerLink="">Login</a>
-                    </li>
                     <li class="relative">
-                        <a routerLink="">Juan</a>
+                        <a routerLink="">Profile</a>
                         <div class="absolute top-10 grid gap-2 p-2 text-start w-28 bg-gray-200">
                             <a routerLink="">Profile</a>
                             <a routerLink="">Orders</a>
@@ -40,9 +55,27 @@
                         </div>
                     </li>
                     <li>
-                        <a routerLink="" class="relative">Cart <span class="absolute left-6 top-2 bg-orange-600 rounded-full px-1 text-xs text-white">3</span></a>
+                        <a routerLink="" class="relative">
+                            <svg role="presentation" stroke-width="2" focusable="false" width="22" height="22"
+                                class="icon icon-cart" viewBox="0 0 22 22">
+                                <path
+                                    d="M9.182 18.454a.91.91 0 1 1-1.818 0 .91.91 0 0 1 1.818 0Zm7.272 0a.91.91 0 1 1-1.818 0 .91.91 0 0 1 1.819 0Z"
+                                    fill="currentColor"></path>
+                                <path
+                                    d="M5.336 6.636H21l-3.636 8.182H6.909L4.636 3H1m8.182 15.454a.91.91 0 1 1-1.818 0 .91.91 0 0 1 1.818 0Zm7.272 0a.91.91 0 1 1-1.818 0 .91.91 0 0 1 1.819 0Z"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                            <span
+                                class="absolute left-6 top-2 bg-orange-600 rounded-full px-1 text-xs text-white">3</span></a>
                     </li>
                 </ul>
+                <button type="button" class="pl-1 pr-2 block sm:hidden" aria-controls="header-sidebar-menu"
+                    aria-expanded="false">
+                    <span class="sr-only">Open navigation menu</span><svg role="presentation" stroke-width="2"
+                        focusable="false" width="22" height="22" class="icon icon-hamburger" viewBox="0 0 22 22">
+                        <path d="M1 5h20M1 11h20M1 17h20" stroke="currentColor" stroke-linecap="round"></path>
+                    </svg></button>
             </nav>
         </div>
     </div>

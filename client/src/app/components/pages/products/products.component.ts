@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../../services/products.service';
 import { Product } from '../../../shared/models/Product';
+import { StarRatingComponent } from '../../star-rating/star-rating.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, StarRatingComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
