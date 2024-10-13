@@ -1,0 +1,11 @@
+<div class="flex gap-3">
+    <input #s type="text" name="search" placeholder="Search" class="rounded-full border-2 px-4 py-1 text-lg"
+        (keyup.enter)="search(s.value)" [value]="searchTerm" />
+    <button (click)="search(s.value)">
+        <svg role="presentation" stroke-width="2" focusable="false" width="22" height="22"
+            class="icon icon-search text-gray-300" viewBox="0 0 22 22">
+            <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
+            <path d="m16 15 3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </button>
+</div>

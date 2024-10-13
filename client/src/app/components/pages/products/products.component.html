@@ -1,16 +1,21 @@
-<div>
-    <ul class="grid grid-cols-3 gap-5 bg-white">
-        <li *ngFor="let product of products" class="mb-8">
+<div class="flex gap-4 items-center mb-8">
+    <app-filters></app-filters>
+    <app-search></app-search>
+</div>
+
+
+<div class="mx-auto">
+    <div class="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-5 bg-white items-center">
+        <div *ngFor="let product of products" class="mb-8">
             <a routerLink="/">
-                <img [src]="product.imageUrl" alt="">
+                <img [src]="product.imageUrl" alt="" class="min-w-64">
             </a>
             <!-- <p>{{product.stars}}</p> -->
             <div class="flex flex-col gap-1 py-4">
                 <app-star-rating></app-star-rating>
                 <p class="text-xl font-medium">{{product.name}}</p>
                 <p class="text-xl font-normal">${{product.price}}</p>
-
             </div>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>
